@@ -1,0 +1,44 @@
+<section id="contatti">
+  <div class="container">
+    <div class="col-xs-12 titolo">
+      <h3>
+        {% if session_language = 'uk' %}
+          CONTACT
+        {% elif session_language = 'fr' %}
+          CONTACT
+        {% else %}
+          CONTATTI
+        {% endif %}
+      </h3>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      {% if session_language = 'uk' %}
+        {% include 'componenti/form_uk.html' %}
+
+      {% elif session_language = 'fr' %}
+        {% include 'componenti/form_fr.html' %}
+
+      {% else %}
+        {% include 'componenti/form.html' %}
+
+      {% endif %}
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+      <p>
+        Céraphin Pasteur Ngele Ngele II<br>
+        Tel: +39.3288130692<br>
+        <a href="mailto:pasteurngele@yahoo.fr">pasteurngele@yahoo.fr</a><br>
+        Via Ricchino, 3<br>
+        25038 Rovato (BS)<br>
+        Italy
+        <br>
+        <br>
+        <strong>Camerun</strong><BR>
+        Tel: +00237 693076684<br>
+        Ancienne rue Razel PK 10<BR>
+        5231 Douala
+      </p>
+    </div>
+  </div><!-- container -->
+</section>

@@ -1,0 +1,4 @@
+Messaggio inviato dalla Pagina ISCRIZIONE NEWSLETTER del Sito Internet br1italia.it
+
+
+email: {{post.email}}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <body>
+  
+  
+   
+  <!-- Incude Menu --> {% include "componenti/menu.html" %} <!-- fine menu -->
+
+  <!--- INIZIO -->
+
+<div class="row rowprincipale">
+
+  <div class="col-md-9">
+
+ </div>
+ 
+  <div class="col-md-3" style="padding-bottom: 30px;">
+
+    {% for post in post_list %}
+    <div class="media mediasfondo">
+        <a class="pull-left" href="{{ post.id }}">{% load cropping %}
+        <img class="media-object imgmedia" src="{% cropped_thumbnail post "croppinghome" %}" alt="...">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading titoloblog">{{ post.titolo|truncatechars:20 }}</h4>
+            <p class="testobloghome">{{ post.body|safe|truncatechars:90}} <a href="./blog/{{ post.id }}" class="btn pulsanteleggi2" role="button">Continua...</a></p>
+            
+        </div>
+    </div>
+    {% endfor %}
+
+  </div><!-- col md -->
+
+{% endblock %}

@@ -1,0 +1,62 @@
+<!-- Features Section -->
+	<section id="italiana" class="contain ">
+		
+		<!-- Features Top Icon -->
+		<div class="contain-logo">
+			<i class="fa fa-check-circle-o "></i>
+		</div>
+		
+		<div class="inner">
+
+			<!-- Header -->
+			<div class="header">
+				SCELTA ITALIANA
+			</div>
+			
+			<!-- Second Header -->
+			<div class="page-desc2">
+				<div class="col-md-3">
+					<!-- <img src="{{STATIC_URL}}/img/logo.png" class="img-responsive"> -->
+				</div>
+				<div class="col-md-9">
+				<b></b>
+				</div>
+				<div class="col-md-12">
+					<div class="inner services bottom-bg" style="opacity: 1">
+			
+				<div id="carousel-example-generic2" class="carousel slide slide-s" data-ride="carousel">
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner service-text">
+				  
+					<!-- Service First Text -->
+
+					<div class="item active oblo">
+							<img src="http://www.br1italia.it/media/_D8N5344.jpg" class="img-responsive oblo" style="opacity: 1">
+					</div>
+					{% for scelta in scelta_list %}
+					<!-- Service Second Text -->
+					<div class="item oblo">{% load cropping %}
+							<img src="{% cropped_thumbnail scelta "slider" %}" class="img-responsive oblo" style="opacity: 1">
+					</div>
+					{% endfor %}
+					
+				  </div>
+				  <!-- End Slides -->
+
+				  <!-- Controls -->
+				  <a class="left carousel-control s-controls" href="#carousel-example-generic2" data-slide="prev" style="margin-top: 250px;">
+				  </a>
+				  <a class="right carousel-control s-controls" href="#carousel-example-generic2" data-slide="next" style="margin-top: 250px;">
+				  </a>
+				</div>
+			
+			</div><!-- End Services Inner 2 -->
+
+				</div>
+			</div>			
+			
+			<div class="clear"></div>
+		</div><!-- End Inner div -->
+		
+	</section><!-- End Mission Section -->

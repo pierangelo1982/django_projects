@@ -1,0 +1,12 @@
+Ciao,
+
+Hai ricevuto un messaggio dal sito internet test.giovannaninapalmieri.com.
+---------------------------------
+
+Name: {{ nome }}
+Cognome: {{ cognome }}
+Email: {{ email }}
+Message: {{ body }}
+
+---------------------------------
+Buona Giornata!

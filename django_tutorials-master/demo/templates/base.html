@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Demo Template</title>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/custom.css">
+
+    </head>
+
+    <body>
+        {% include 'components/header.html' %}
+
+
+        {% block content %}
+
+        {% endblock %}
+
+    
+
+        {% include 'components/footer.html' %}
+    </body>
+</html>

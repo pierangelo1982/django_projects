@@ -1,0 +1,24 @@
+<!-- Icon left -->	
+									<div class="tab-pane fade" id="fourth">
+
+											
+											<div class="tab-desc" style="width: 98%">
+
+												<p>Lo strumentario è caratterizzato da impugnature ergonomiche e strumentazione leggera pressofusa.
+													<br>Prodotto totalmente in italia con acciaio certificato.
+													<br>Peso totale dello strumentario: 12,50 Kg.
+													</p>
+													<hr>										
+											</div>
+												{% for immagini in immagini_list %}
+												<div class="col-xs-6 col-sm-4 col-md-3 thumbgallery" style="margin-bottom: 30px;">
+													{% load cropping %}
+													<a href="{{MEDIA_URL}}/{{immagini.image}}" data-lightbox="roadtrip">
+													<img src="{% cropped_thumbnail immagini "thumb" %}" class="img-responsive stondami">
+													</a>
+													<!--<p class="titolothumb">{{immagini.titolo}}</p>-->
+												</div>
+												{% endfor %}	
+											
+											<div class="clear"></div>
+									</div>

@@ -1,0 +1,7 @@
+Messaggio inviato dalla Pagina CONTATTI del Sito Internet br1italia.it
+
+Denominazione: {{post.denominazione}}
+email: {{post.email}}
+oggetto: {{post.oggetto}}
+Messaggio: {{post.messaggio}}
+

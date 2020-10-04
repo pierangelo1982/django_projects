@@ -1,0 +1,37 @@
+<!--Contact Section -->
+	<section id="contact" class="contain ">
+				
+			
+				<!--Contact Form -->
+				<div class="contact-form">
+					
+					<form action="/contattaci/" method="post">{% csrf_token %}
+				
+						<!--Contact Header -->
+						<h1 class="contact-us">Contattaci</h1>
+						<!-- Name Input -->
+						<input type="text" name="denominazione" id="name" class="form" placeholder="Denominazione" />
+						<!-- Email Input -->
+						<input type="email" name="email" id="email" class="form" placeholder="Email" />
+						<!-- Subject Input -->
+						<input type="text" name="oggetto" id="subject" class="form" placeholder="Oggetto" />
+						<!-- Message Area -->
+						<textarea name="messaggio" id="message" class="form textarea"  placeholder="Messaggio"></textarea>
+						<!-- Send Button -->
+						<button type="submit" id="submit" name="Invia" class="form-btn"><i class="fa fa-envelope"></i></button> 
+						
+					</form>
+					
+				</div><!-- End Contact Form -->
+			
+				<!-- Contact Top Icon -->
+				<div class="contain-logo contact-logo">
+					<i class="fa fa-map-marker "></i>
+				</div>
+				
+			<!-- Google Map -->
+			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+			<div id="map"></div>
+			<!-- End Google Map -->
+			
+	</section><!-- End Contact Section -->

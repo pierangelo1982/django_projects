@@ -1,0 +1,287 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+
+<body class="bodyblog">
+
+
+
+ 
+   
+  <!-- Incude Menu --> {% include "componenti/menu.html" %} <!-- fine menu -->
+
+  <!--- inizio -->
+
+
+
+<div class="container">
+  
+  <div class="row">
+
+
+  <div class="col-sm-6 col-md-2" >
+      <h3 class="coloreheadertime">2014</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2014" in curriculum.anno %}
+          <p class="testotimeline sfondotime sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2013</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2013" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+  
+  <div class="col-sm-6 col-md-2" >
+      <h3 class="coloreheadertime">2012</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2012" in curriculum.anno %}
+          <p class="testotimeline sfondotime sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2011</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2011" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2010</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2010" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2009</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2009" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2008</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2008" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2007</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2007" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+
+<div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2006</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2006" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2005</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2005" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+<div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2004</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2004" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2003</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2003" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+
+
+
+<div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2002</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2002" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+  
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2001</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2001" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">2000</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "2000" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+  
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">1999</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "1999" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">1998</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "1998" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">1997</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "1997" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+
+
+  
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">1996</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "1996" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+  
+
+  <div class="col-sm-6 col-md-2">
+      <h3 class="coloreheadertime">1995</h3>
+      <p></p>
+          {% for curriculum in time_list %}
+          {% if "1995" in curriculum.anno %}
+          <p class="testotimeline sfondotime">{{ curriculum.titolo }}</p>
+          {% endif %}
+          {% endfor %}
+      <p></p>
+  </div><!-- END COL SM 6 -->
+
+
+
+
+    </div><!-- ROW -->
+
+  </div>
+
+
+
+
+	{% endblock %}
+

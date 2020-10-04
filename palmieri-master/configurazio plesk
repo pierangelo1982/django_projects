@@ -1,0 +1,21 @@
+    #DocumentRoot /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina
+    #ServerAdmin root@vps42667
+    ServerName test.giovannaninapalmieri.com
+    ServerAlias test.giovannaninapalmieri.com
+    # Other directives here
+    WSGIScriptAlias / /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/apache/django.wsgi
+     
+   #Alias /static/admin/ //var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/lib/python2.7/site-packages/django/contrib/admin/static/admin/
+    Alias /static/admin/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/admin/
+    Alias /static/image_cropping/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/image_cropping/
+    Alias /static/filer/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/filer/
+    Alias /static/contact_form/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/contact_form/
+    Alias /static/ckeditor/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/ckeditor/
+    Alias /static/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/static/
+    #Alias /media/ /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/media/
+    <Directory /var/www/vhosts/vps42667.ovh.net/test.giovannaninapalmieri.com/palmieri/nina/apache>
+    <Files django.wsgi>
+    Order allow,deny
+    Allow from all  
+    </Files>
+    </Directory>

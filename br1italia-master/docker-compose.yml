@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: python manage.py makemigrations
+    command: python manage.py migrate
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+      - ~/Scrivania/my-docker/br1italia-docker/media:/code/media
+    ports:
+      - "8000:8000"
+    external_links:
+      - test-mysql:db
+    #network_mode: bridge
+    networks:
+      - pierangelo-prova
+
+networks:
+  pierangelo-prova:
+    external: true

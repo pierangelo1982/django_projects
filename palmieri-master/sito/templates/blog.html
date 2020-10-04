@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+  <body class="bodyblog">
+  
+<div class"container">  
+   
+  <!-- Incude Menu --> {% include "componenti/menu.html" %} <!-- fine menu -->
+
+  <!--- inizio -->
+
+<div class="container">
+
+<div class="row rowprincipale ">
+  {% for post in post_list %}
+  <div class="col-sm-6 col-md-3" style="height: 460px;">
+    <div class="thumbnail">{% load cropping %}
+      <img class="imgblogthumb" src="{% cropped_thumbnail post "croppingthumb" %}" alt="...">
+      <div class="caption">
+        <h3 class="titoloblog">{{ post.titolo|truncatechars:20 }}</h3>
+        <p>{{ post.body|safe|truncatechars:80}}</p>
+        <p><a href="{{ post.id }}" class="btn pulsanteleggi" role="button">Continua...</a><!--<a href="{{ post.id }}" class="btn btn-default" role="button">Button</a> --></p>
+      </div>
+    </div>
+  </div><!-- END COL SM 6 -->
+      {% endfor %}
+</div><!-- end row -->
+
+</div class="col-md-12">
+{% if page_obj.has_previous %}
+  <a href= "?page={{ page_obj.previous_page_number }}">newer entries &lt;&lt; </a>
+{% endif %}
+ 
+<span class="current">
+  &nbsp;Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+</span>
+ 
+{% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}"> &gt;&gt; older entries</a>
+{% endif %}
+
+</div>
+
+</div> <!--container -->
+
+{% endblock %}

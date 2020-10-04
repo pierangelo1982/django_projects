@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Post Pubblicati:</h1>
+        <p>
+            <hr>
+        </p>
+
+        {% for post in post_list %}
+        <h2>
+            {{post.titolo}}
+        </h2>
+        <h5>Pubblicato il: {{post.pub_date}}</h5>
+        <p>{{post.descrizione}}</p>
+        <img src="/media/{{post.image}}" alt="" style="width: 200px;">
+        <p><hr></p>
+        {% endfor %}
+    </div>
+
+
+    
+
+{% endblock %}
+
+
+
+

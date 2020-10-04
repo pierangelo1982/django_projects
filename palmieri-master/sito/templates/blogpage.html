@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+
+
+  <body class="bodyblog">
+
+  	<script type="text/javascript">
+    $(document).ready(function() {
+
+  /* This is basic - uses default settings */
+  
+  $("#thumbnail").imgmediagallery();
+  
+  /* Using custom settings */
+  
+});
+  </script>
+  
+<div class"container">  
+   
+  <!-- Incude Menu --> {% include "componenti/menu.html" %} <!-- fine menu -->
+
+  <!--- inizio -->
+
+<div class="container">
+
+<div class="row">
+
+
+    <div class="col-md-7 sfondoblogpage">
+        <h1 class="titoloblogpage">{{ post.titolo }}</h1>
+        <h6>{{ post.pub_date }}</h6>
+        <p class="testoblogpage">{{ post.body|safe }}</p>
+        <p></p>
+        
+        <!-- <span class='st_sharethis_large' displayText='ShareThis'></span> -->
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_pinterest_large' displayText='Pinterest'></span>
+        <span class='st_email_large' displayText='Email'></span>
+
+
+    </div><!-- Fine Col -->
+
+
+
+
+  <div class="col-md-5"> 
+
+
+<div class="row">
+      {% for galleria in galleria_list %}
+        <div class="col-xs-6 col-md-4">{% load cropping %}
+            <a href="{% cropped_thumbnail galleria "cropping" %}" class="thumbnail" data-lightbox="roadtrip">
+            <img src="{% cropped_thumbnail galleria "croppingthumb" %}" class="imgmediagallery" alt="{{ galleria.titolo }">
+            </a>
+        </div>
+       {% endfor %}
+    </div>
+
+
+
+</div> <!-- end MD - 5 -->
+
+
+
+</div><!-- Fine Row -->
+
+
+
+ 
+
+
+</div> <!--container -->
+
+{% endblock %}

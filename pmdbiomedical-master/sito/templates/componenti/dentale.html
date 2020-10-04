@@ -1,0 +1,38 @@
+
+<section id="dentario">
+  <div class="container">
+    <div class="col-xs-12 titolo">
+      <h3>
+        {% if session_language = 'uk' %}
+          {{dentale.titolo_uk}}
+
+        {% elif session_language = 'fr' %}
+          {{dentale.titolo_fr}}
+
+        {% else %}
+          {{dentale.titolo}}
+
+        {% endif %}
+      </h3>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <p>
+        {% if session_language = 'uk' %}
+          {{dentale.body_uk|safe}}
+
+        {% elif session_language = 'fr' %}
+          {{dentale.body_fr|safe}}
+
+        {% else %}
+          {{dentale.body|safe}}
+
+        {% endif %}
+      </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      {% include 'componenti/flexsliderdentist.html' %}
+      <br>
+    </div>
+  </div><!-- container -->
+</section>

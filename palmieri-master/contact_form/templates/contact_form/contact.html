@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <body>
+<div class="container">
+
+  <!-- Incude Menu --> {% include "componenti/menu.html" %} <!-- fine menu -->
+
+<div class="row">
+       <div class="col-md-4"></div>
+       
+       <div class="col-md-4">
+
+         <h1>{% trans "Contact Form" %}</h1>
+         <p>{% trans "This is the contact form" %}</p>
+
+
+    
+        <form action="" method="post" class="form-horizontal">{% csrf_token %}
+            <p>{{ form.as_ul }}</p>
+            <input type="submit" class="btn pulsanteleggi" value="{% trans "Invia" %}" />
+        </form>
+      </div>
+    
+    <div class="col-md-4"></div>
+
+</div> 
+</div>  
+{% endblock %}
+

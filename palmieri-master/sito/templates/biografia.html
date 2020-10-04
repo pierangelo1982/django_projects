@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<body>
+
+<div class="container">
+
+        <!-- Incude Menu --> {% include "componenti/menu.html" %} <!-- fine menu -->
+
+  <div class="row">
+
+    <div class="col-md-12">
+    <h1 class="titoloblogpage">BIOGRAFIA</h1>
+    </div>
+
+    <div class="col-md-6"><p class="testoblogpage sfondoblogpage">Abruzzese,  è giornalista professionista, autrice e conduttrice tv. Durante gli studi universitari collabora con diverse testate giornalistiche e radiofoniche. Arriva alla tv grazie a uno stage, seguito da una piccola collaborazione, presso la redazione di BluNotte Misteri Italiani che è un po’ anche la realizzazione di un sogno: dice sempre, ancora oggi, che da grande avrebbe voluto essere Carlo Lucarelli. In seguito firma come giornalista dei servizi per Ballarò, come autore/filmaker le tre edizioni di Invisibili-programma sui senzatetto condotto da Marco Berry- e nel frattempo inizia l’avventura dei Viaggi di Nina, docusoap in 5 edizioni dedicata alle donne interamente fatta da lei. Nei Viaggi, racconta storie di donne molto diverse tra loro: donne lesbiche, donne soldato, donne che hanno scelto di fare le escort, donne 40enni alle prese con una nuova vita da single. Gira, scrive, è la voce narrante ma, per scelta, non appare mai in video.</p>
+    </div><!-- Fine MD-5 -->
+    
+
+    
+
+    <div class="col-md-6"><p class="testoblogpage sfondoblogpage">Nel frattempo realizza servizi per Speciale Tg1 e per Le Iene, sempre senza andare mai in video. A fine 2010 un suo caro amico autore la convince che è arrivato il momento di metterci la faccia e le chiede di fare il provino per Sex education show. Nina, che in quel momento è alle prese con la pubblicazione del suo libro Ragazze che amano ragazze, edito da Mondadori, accetta la sfida anche se in fondo al suo cuore spera che le dicano: “Come conduttrice non ti vogliamo, ma sei la benvenuta nel team di autori”. Per fortuna non va come spera e, ad oggi, ha condotto 20 puntate del programma che parla di sesso con gli italiani e attraverso gli italiani senza moralismi e ipocrisie. Nina non è per niente pentita di aver fatto quel provino… </p>
+   
+     <!-- <span class='st_sharethis_large' displayText='ShareThis'></span> -->
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_pinterest_large' displayText='Pinterest'></span>
+        <span class='st_email_large' displayText='Email'></span>
+    </div><!-- DIV COL MD5 -->
+
+
+
+    {% if galleriapagina_list %}
+
+  <div class="row">
+    {% for galleriapagina in galleriapagina_list %}
+    <div class="col-md-2">{% load cropping %}
+        <a href="{% cropped_thumbnail galleriapagina "cropping" %}" data-lightbox="roadtrip">
+        <img src="{% cropped_thumbnail galleriapagina "croppingthumb" %}" alt="..." class="img-thumbnail imgmedia2"></a><!--
+        <H6 class="sfondoblogpage"; style="color: #000000"><i class="fa fa-chevron-circle-up"></i> {{ galleriapagina.didascalia }}</h6>
+        -->
+    </div>  
+    {% endfor %}
+
+  </div><!-- close Row -->
+  {% endif %}
+   <H6 style="color: #ffffff">Foto: Renato Giaccari    –    Stylist: Danizza Della Vecchia   –    Make up: Lorena Trivellone
+Thanks to: In vitro- McFinella- Before- EllyF</H6>
+</div><!-- container close -->
+
+{% endblock %}
+
+
